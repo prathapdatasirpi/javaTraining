@@ -5,7 +5,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class JavaTrainingApplication {
+	//Declare static variable
+	public static String JAVA_TRAINING = "JAVA_TRAINING";
 
+	//Declare static method
 	static void javaConditions() {
 				// Java  variables
 				String name = "Prathap";
@@ -51,7 +54,13 @@ public class JavaTrainingApplication {
 	}
 
 	public static void main(String[] args) {
+		// Calling Static method
 		javaConditions();
+		// Create object for Employee class and passed values via paramteres for
+		Employee emp = new Employee("Prathap", 0123);
+		emp.printEmployeeDetails();
+		System.out.println("Printing Static variable " + JAVA_TRAINING);
+		
 		SpringApplication.run(JavaTrainingApplication.class, args);
 	}
 
